@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    {% for post in object_list %}
+        <h1>{{post.title}}</h1>
+        <p>{{post.content}}</p>
+    {% endfor %}
+
+    <!-- {% for post in object_list %}: Esta línea inicia un bucle for que itera sobre cada elemento
+    en object_list. Cada elemento se asigna a la variable -->
+
+    <!-- <h1>{{post.title}}</h1>: Dentro del bucle, esta línea genera un encabezado <h1> que muestra el título del post actual. {{post.title}} es una expresión de plantilla de Django
+        que se reemplaza con el valor del atributo title del objeto -->
+
+    <!-- <p>{{post.content}}</p>: Esta línea genera un párrafo <p> que muestra el contenido del post actual. {{post.content}} es una expresión de plantilla de Django
+        que se reemplaza con el valor del atributo content del objeto -->
+
+    <!-- {% endfor %}: Esta línea finaliza el bucle for -->
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">MiLogo</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#acerca-de">Acerca de</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a Mi Sitio Web</h1>
+            <p>Descubre todo lo que tenemos para ofrecerte.</p>
+            <a href="#servicios" class="btn">Explorar Servicios</a>
+        </div>
+    </header>
+
+    <!-- Sección de características -->
+    <section class="features" id="servicios">
+        <div class="feature">
+            <i class="fas fa-rocket"></i>
+            <h2>Rápido y Eficiente</h2>
+            <p>Nuestros servicios están diseñados para ofrecerte la mejor experiencia.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-cogs"></i>
+            <h2>Personalizable</h2>
+            <p>Adaptamos nuestras soluciones a tus necesidades específicas.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-users"></i>
+            <h2>Enfocado en el Cliente</h2>
+            <p>Tu satisfacción es nuestra prioridad número uno.</p>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Adrian. Todos los derechos reservados.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+</body>
+</html>
