@@ -41,16 +41,15 @@ body {
     color: #ff6f61;
 }
 
-/* Sección Hero */
+/* Sección Hero 
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #333;
     text-align: center;
-}
+} */
 
 .hero-content h1 {
     font-size: 3rem;
@@ -136,4 +135,46 @@ body {
 
 .social-links a:hover {
     color: #ff6f61;
+}
+
+/* Estilos para el contenedor de los posts */
+.post-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Estilos para cada post */
+.post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Estilos para el título del post */
+.post-title {
+    font-size: 24px;
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el contenido del post */
+.post-content {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    border: 20px solid red;
+}
+
+/* Estilos para la imagen del post */
+.post-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
 }

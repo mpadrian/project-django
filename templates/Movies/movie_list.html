@@ -1,0 +1,17 @@
+{% extends 'peliculas/base.html' %}
+
+{% block title %}Lista de Películas{% endblock %}
+
+{% block content %}
+    <h1>Lista de Películas</h1>
+    <div class="peliculas-grid">
+        {% for pelicula in peliculas %}
+            <div class="pelicula-card">
+                <img src="{{ pelicula.portada.url }}" alt="{{ pelicula.titulo }}">
+                <h2>{{ pelicula.titulo }}</h2>
+                <p>{{ pelicula.descripcion|truncatechars:100 }}</p>
+                <a href="{% url 'detalle_pelicula' pelicula.id %}" class="btn">Ver más</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
