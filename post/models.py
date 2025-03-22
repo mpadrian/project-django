@@ -10,4 +10,4 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-    #image=models.ImageField(upload_to='images/', blank=True, null=True)
+    image=models.ImageField(upload_to='images/', blank=True, null=True)

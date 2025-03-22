@@ -11,6 +11,10 @@
     {% for post in object_list %}
         <h1>{{post.title}}</h1>
         <p>{{post.content}}</p>
+
+        {% if post.image %}
+            <img src="{{post.image.url}}" alt="A picture of {{post.title}}">
+        {% endif %}
     {% endfor %}
 
     <!-- {% for post in object_list %}: Esta línea inicia un bucle for que itera sobre cada elemento
